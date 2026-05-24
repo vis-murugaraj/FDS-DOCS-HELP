@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}FAQ{% endblock %}
+
+{% block content %}
+<header class="page-header">
+    <p class="eyebrow">FAQ</p>
+    <h1>Frequently asked questions</h1>
+    <p class="lede">Quick answers to the questions we hear most often.</p>
+</header>
+
+<div class="faq">
+    {% for item in faqs %}
+        <details class="faq-item">
+            <summary>{{ item.question }}</summary>
+            <p>{{ item.answer }}</p>
+        </details>
+    {% endfor %}
+</div>
+{% endblock %}

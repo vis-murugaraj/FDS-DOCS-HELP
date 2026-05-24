@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <p class="eyebrow">Documentation Portal</p>
+    <h1>Welcome to {{ site.short_name }} Docs</h1>
+    <p class="lede">{{ site.tagline }}</p>
+    <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ url_for('getting_started') }}">Get started</a>
+        <a class="btn btn-ghost" href="{{ url_for('api_reference') }}">View API reference</a>
+    </div>
+</section>
+
+<section class="card-grid" aria-label="Documentation sections">
+    {% for card in cards %}
+        <article class="card">
+            <h2>{{ card.title }}</h2>
+            <p>{{ card.description }}</p>
+            <a class="card-link" href="{{ url_for(card.endpoint) }}">{{ card.cta }} &rarr;</a>
+        </article>
+    {% endfor %}
+</section>
+
+<section class="callout">
+    <h2>Looking for something specific?</h2>
+    <p>
+        This portal is an early draft. If you can't find what you need, head to the
+        <a href="{{ url_for('contact') }}">Contact</a> page and let us know.
+    </p>
+</section>
+{% endblock %}

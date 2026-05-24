@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ guide.title }}{% endblock %}
+
+{% block content %}
+<article class="page">
+    <header class="page-header">
+        <p class="eyebrow"><a href="{{ url_for('guides') }}">&larr; All guides</a></p>
+        <h1>{{ guide.title }}</h1>
+        <p class="lede">{{ guide.summary }}</p>
+    </header>
+
+    <p>
+        This is a placeholder page for the <strong>{{ guide.title }}</strong> guide.
+        The final version will include detailed steps, screenshots and code samples.
+    </p>
+
+    <p>
+        In the meantime, if you have questions, please get in touch via the
+        <a href="{{ url_for('contact') }}">Contact</a> page.
+    </p>
+</article>
+{% endblock %}

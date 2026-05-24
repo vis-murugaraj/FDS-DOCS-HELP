@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<header class="page-header">
+    <p class="eyebrow">Contact</p>
+    <h1>Get in touch</h1>
+    <p class="lede">Questions, feedback or documentation issues? We would love to hear from you.</p>
+</header>
+
+<section class="page contact-grid">
+    <div>
+        <h2>Support</h2>
+        <p>For product help and technical issues:</p>
+        <p><a href="mailto:support@fdssys.com">support@fdssys.com</a></p>
+    </div>
+    <div>
+        <h2>Documentation feedback</h2>
+        <p>Spotted a typo or unclear section?</p>
+        <p><a href="mailto:docs@fdssys.com">docs@fdssys.com</a></p>
+    </div>
+    <div>
+        <h2>Company</h2>
+        <p>{{ site.company }}</p>
+        <p class="muted">United Kingdom</p>
+    </div>
+</section>
+{% endblock %}

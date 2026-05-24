@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Getting Started{% endblock %}
+
+{% block content %}
+<article class="page">
+    <header class="page-header">
+        <p class="eyebrow">Getting Started</p>
+        <h1>Set up {{ site.short_name }} in minutes</h1>
+        <p class="lede">A short walkthrough to get you from zero to your first working configuration.</p>
+    </header>
+
+    <ol class="steps">
+        <li>
+            <h2>1. Create an account</h2>
+            <p>Sign up using your work email address and confirm via the verification link we send you.</p>
+        </li>
+        <li>
+            <h2>2. Install the client</h2>
+            <p>Download the {{ site.short_name }} client for your platform and follow the installer.</p>
+        </li>
+        <li>
+            <h2>3. Configure your first project</h2>
+            <p>Create a project, add a teammate and set the default permissions.</p>
+        </li>
+        <li>
+            <h2>4. Explore the guides</h2>
+            <p>Head over to the <a href="{{ url_for('guides') }}">Guides</a> for deeper walkthroughs.</p>
+        </li>
+    </ol>
+</article>
+{% endblock %}

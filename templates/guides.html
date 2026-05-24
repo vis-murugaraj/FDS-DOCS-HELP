@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Guides{% endblock %}
+
+{% block content %}
+<header class="page-header">
+    <p class="eyebrow">Guides</p>
+    <h1>How-to guides</h1>
+    <p class="lede">Practical walkthroughs for the most common tasks.</p>
+</header>
+
+<ul class="list">
+    {% for guide in guides %}
+        <li class="list-item">
+            <h2><a href="{{ url_for('guide_detail', slug=guide.slug) }}">{{ guide.title }}</a></h2>
+            <p>{{ guide.summary }}</p>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

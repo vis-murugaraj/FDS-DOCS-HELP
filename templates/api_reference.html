@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}API Reference{% endblock %}
+
+{% block content %}
+<header class="page-header">
+    <p class="eyebrow">API Reference</p>
+    <h1>API Reference</h1>
+    <p class="lede">Endpoints, request and response formats, and authentication details.</p>
+</header>
+
+<section class="page">
+    <h2>Base URL</h2>
+    <pre><code>https://api.fdssys.com/v1</code></pre>
+
+    <h2>Authentication</h2>
+    <p>All requests must include a bearer token in the <code>Authorization</code> header.</p>
+    <pre><code>Authorization: Bearer YOUR_API_TOKEN</code></pre>
+
+    <h2>Example request</h2>
+    <pre><code>GET /v1/projects HTTP/1.1
+Host: api.fdssys.com
+Authorization: Bearer YOUR_API_TOKEN
+Accept: application/json</code></pre>
+
+    <p class="muted">
+        This page is a placeholder. Detailed endpoint documentation will be added
+        as the API stabilises.
+    </p>
+</section>
+{% endblock %}
