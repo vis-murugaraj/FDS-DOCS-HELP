@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Page not found{% endblock %}
+
+{% block content %}
+<section class="page page-center">
+    <p class="eyebrow">404</p>
+    <h1>We couldn't find that page</h1>
+    <p class="lede">The page you were looking for doesn't exist or has moved.</p>
+    <p><a class="btn btn-primary" href="{{ url_for('home') }}">Back to home</a></p>
+</section>
+{% endblock %}
